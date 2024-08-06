@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A game where you divide into pieces and eat other players." />
+    <title>RISE.EXE - Vanis.io</title>
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind+Madurai:500|Nunito|Ubuntu:700|Fira+Code:600">
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
     <style>
-        /* General styles */
         html {
             background-color: rgb(5, 5, 5);
-            color: #dadada;
-            font-family: 'Nunito', sans-serif;
         }
-
         body {
             overflow: hidden;
             padding: 0;
+            color: #dadada;
+            font-family: 'Nunito', sans-serif;
         }
-
-        /* Loading screen styles */
         .loading-screen {
             display: flex;
             justify-content: center;
@@ -22,7 +27,6 @@
             height: 100vh;
             background-color: #064b66;
         }
-
         .loading-screen .loader {
             border: 16px solid #f3f3f3;
             border-radius: 50%;
@@ -31,25 +35,19 @@
             height: 120px;
             animation: spin 2s linear infinite;
         }
-
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
-
-        /* HUD styles */
         .hud {
             position: absolute;
             top: 10px;
             left: 10px;
             color: white;
         }
-
         .hud .cell-info {
             margin-bottom: 10px;
         }
-
-        /* Button styles */
         .button {
             padding: 10px 20px;
             background-color: #1cb9d4;
@@ -59,19 +57,10 @@
             cursor: pointer;
             font-size: 16px;
         }
-
         .button:hover {
             background-color: #17a2b8;
         }
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="A game where you divide into pieces and eat other players." />
-    <title>RISE.EXE - Vanis.io</title>
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
 </head>
 <body>
     <div class="loading-screen" id="loadingScreen">
@@ -83,6 +72,8 @@
     </div>
     <button class="button" id="startButton" style="display: none;">Start Game</button>
     
+    <script src="https://raw.githubusercontent.com/PrimeVanisEXT/Prime/main/js/vendor.js"></script>
+    <script src="https://raw.githubusercontent.com/PrimeVanisEXT/Prime/main/main.js"></script>
     <script>
         // JavaScript to hide the loading screen and show the start button and HUD
         window.addEventListener('load', function() {
@@ -93,43 +84,3 @@
     </script>
 </body>
 </html>
-<div class="settings">
-    <h2>Settings</h2>
-    <div class="setting-item">
-        <label for="volume">Volume</label>
-        <input type="range" id="volume" name="volume" min="0" max="100">
-    </div>
-    <div class="setting-item">
-        <label for="graphics">Graphics Quality</label>
-        <select id="graphics" name="graphics">
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-        </select>
-    </div>
-    <div class="setting-item">
-        <button class="button">Save Settings</button>
-    </div>
-</div>
-<div class="controls">
-    <h2>Controls</h2>
-    <div class="control-item">
-        <label for="move-up">Move Up</label>
-        <input type="text" id="move-up" name="move-up" value="W">
-    </div>
-    <div class="control-item">
-        <label for="move-down">Move Down</label>
-        <input type="text" id="move-down" name="move-down" value="S">
-    </div>
-    <div class="control-item">
-        <label for="move-left">Move Left</label>
-        <input type="text" id="move-left" name="move-left" value="A">
-    </div>
-    <div class="control-item">
-        <label for="move-right">Move Right</label>
-        <input type="text" id="move-right" name="move-right" value="D">
-    </div>
-    <div class="control-item">
-        <button class="button">Save Controls</button>
-    </div>
-</div>
